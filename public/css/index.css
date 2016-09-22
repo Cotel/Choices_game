@@ -4,17 +4,23 @@ html, body {
     font-family: 'Baloo Bhaina', cursive;
 }
 
-a {
-    color: grey;
+a{
+    color: black;
     text-decoration: none;
 }
 
 .outer-container {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: center;
+    flex-flow: column nowrap;
     height: 100%;
+}
+
+.choices-container {
+    order: 1;
+    display:flex;
+    height: 100%;
+    flex-flow: row wrap;
+    flex-grow: 2;
 }
 
 .left-container, .right-container {
@@ -23,7 +29,7 @@ a {
     justify-content: center;
     align-items: flex-start;
     order: 1;
-    flex: 1 1 auto;
+    flex: 1 auto;
     background-color: white;
     -webkit-transition: flex-grow 1s ease;
     transition: flex-grow 1s ease;
@@ -39,6 +45,10 @@ a {
 
 .right-container {
     background-color: black;
+}
+
+.right-container a {
+    color: white;
 }
 
 .left-title, .right-title {
@@ -61,6 +71,21 @@ a {
 
 .inner-content {
     order: 2;
+    font-size: 22px;
     text-align: center;
-    width: 450px;
+    width: 300px;
+}
+
+.bottom-container {
+    box-shadow: 0px -2px 10px 0px rgba(0,0,0,0.35);
+    background-color: #00e1b9;
+    padding-right: 20px;
+    font-size: 14px;
+    order: 2;
+    flex: 0.001;
+    text-align: right;
+}
+
+.bottom-container a {
+    color: white;
 }

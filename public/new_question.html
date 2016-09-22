@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Nuevo dilema</title>
+        <script src="../bower_components/modernizr/bin/modernizr" charset="utf-8"></script>
+        <script src="../bower_components/angular/angular.js" charset="utf-8"></script>
+        <script src="../bower_components/angular-route/angular-route.js" charset="utf-8"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="/js/newQuestion.js" charset="utf-8"></script>
+    </head>
+    <body ng-app="newQuestion" ng-controller="QuestionFormCtrl">
+        <form novalidate>
+            <formly-form model="vm.question" fields="vm.questionFields" form="questionForm">
+                <button type="submit" ng-disabled="vm.questionForm.$invalid">Enviar</button>
+            </formly-form>
+        </form>
+    </body>
+</html>

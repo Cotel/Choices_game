@@ -15,20 +15,23 @@
     </head>
     <body ng-controller="QuestionsCtrl">
         <div class="outer-container">
-            <div class="left-container">
-                <p class="left-title">ELIGE</p>
-                <div class="inner-content">
-                    <a href="#" id="a_izq" ng-bind="a_izq" ng-click="trigger_transition($event)" id="izq">{{question.opcion_izq}}</a>
+            <div class="choices-container">
+                <div class="left-container">
+                    <p class="left-title">ELIGE</p>
+                    <div class="inner-content">
+                        <a href="#" id="a_izq" ng-bind="a_izq" ng-click="trigger_transition($event)" id="izq">{{question.opcion_izq}}</a>
+                    </div>
+                </div>
+                <div class="right-container">
+                    <p class="right-title">UNO</p>
+                    <div class="inner-content">
+                        <a href="#" id="a_der" ng-bind="a_der" ng-click="trigger_transition($event)" id="der">{{question.opcion_der}}</a>
+                    </div>
                 </div>
             </div>
-            <div class="right-container">
-                <p class="right-title">UNO</p>
-                <div class="inner-content">
-                    <a href="#" id="a_der" ng-bind="a_der" ng-click="trigger_transition($event)" id="der">{{question.opcion_der}}</a>
-                </div>
+            <div class="bottom-container">
+                <p>Tienes un dilema? <a href="/new_question">Haz click aqui!</a></p>
             </div>
-
         </div>
-
     </body>
 </html>

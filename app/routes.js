@@ -17,6 +17,20 @@ module.exports = function(app) {
         });
     });
 
+    app.post('/questions', function(req, res) {
+        var Question = new Question();
+        Question.opcion_izq = req.body.opcion_izq;
+        Question.opcion_der = req.body.opcion_der;
+        Question.result_izq = 0;
+        Question.result_der = 0;
+        Question.total = 0;
+
+        Question.save(function(err) {
+            if(err)
+                res.send(err);
+        });
+    });
+
     app.get('/question/:id', function(req, res) {
         Question.findById(req.params.id, function(err, question) {
             if (err) res.send(err);

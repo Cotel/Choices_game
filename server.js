@@ -8,6 +8,7 @@ var methodOverride = require('method-override');
 mongoose.connect("mongodb://localhost/choices_game")
 
 app.use(express.static(__dirname+'/public'));
+app.use("/new_question", express.static(__dirname+"/public/new_question.html"));
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
