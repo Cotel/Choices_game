@@ -1,0 +1,66 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Baloo Bhaina', cursive;
+}
+
+a {
+    color: grey;
+    text-decoration: none;
+}
+
+.outer-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+}
+
+.left-container, .right-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    order: 1;
+    flex: 1 1 auto;
+    background-color: white;
+    -webkit-transition: flex-grow 1s ease;
+    transition: flex-grow 1s ease;
+}
+
+.animated-left-container {
+    flex-grow: 0.001;
+}
+
+.animated-right-container {
+    flex-grow: 0.001;
+}
+
+.right-container {
+    background-color: black;
+}
+
+.left-title, .right-title {
+    flex: 1 100%;
+}
+
+.left-title {
+    order: 1;
+    text-align: right;
+    font-size: 48px;
+    margin-right: 20px;
+}
+
+.right-title {
+    order: 1;
+    font-size: 48px;
+    margin-left: 20px;
+    color: white;
+}
+
+.inner-content {
+    order: 2;
+    text-align: center;
+    width: 450px;
+}

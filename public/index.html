@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html class="no-js" ng-app="choices_game">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Choices Game</title>
+        <link rel="stylesheet" href="/css/index.css">
+        <script src="../bower_components/modernizr/bin/modernizr" charset="utf-8"></script>
+        <script src="../bower_components/angular/angular.js" charset="utf-8"></script>
+        <script src="../bower_components/angular-route/angular-route.js" charset="utf-8"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+        <!-- <script src="/js/index.js" charset="utf-8"></script> -->
+        <script src="/js/controllers.js" charset="utf-8"></script>
+    </head>
+    <body ng-controller="QuestionsCtrl">
+        <div class="outer-container">
+            <div class="left-container">
+                <p class="left-title">ELIGE</p>
+                <div class="inner-content">
+                    <a href="#" id="a_izq" ng-bind="a_izq" ng-click="trigger_transition($event)" id="izq">{{question.opcion_izq}}</a>
+                </div>
+            </div>
+            <div class="right-container">
+                <p class="right-title">UNO</p>
+                <div class="inner-content">
+                    <a href="#" id="a_der" ng-bind="a_der" ng-click="trigger_transition($event)" id="der">{{question.opcion_der}}</a>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>
