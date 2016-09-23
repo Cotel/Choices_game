@@ -3,20 +3,35 @@
     <head>
         <meta charset="utf-8">
         <title>Nuevo dilema</title>
+        <link rel="stylesheet" href="/css/index.css">
         <script src="../bower_components/modernizr/bin/modernizr" charset="utf-8"></script>
         <script src="../bower_components/angular/angular.js" charset="utf-8"></script>
         <script src="../bower_components/angular-route/angular-route.js" charset="utf-8"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
         <script src="/js/controllers.js" charset="utf-8"></script>
     </head>
     <body ng-controller="QuestionFormCtrl">
-        <div>
-            <label>Opcion izquierda</label>
-            <input type="text" ng-model="opcion_izq" />
-            <br/>
-            <label>Opcion derecha</label>
-            <input type="text" ng-model="opcion_der" />
-            <button ng-click="createQuestion()">Enviar</button>
+        <div class="outer-container">
+            <div class="choices-container">
+                <div class="left-container">
+                    <p class="left-title"></p>
+                    <div class="inner-content">
+                        <label>Opcion izquierda</label>
+                        <input type="text" ng-model="opcion_izq" />
+                    </div>
+                </div>
+                <div class="right-container">
+                    <p class="right-title"></p>
+                    <div class="inner-content">
+                        <label>Opcion derecha</label>
+                        <input type="text" ng-model="opcion_der" />
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-container-2">
+                <button ng-click="createQuestion()">Enviar</button>
+            </div>
         </div>
     </body>
 </html>
