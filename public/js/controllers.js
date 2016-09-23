@@ -60,9 +60,7 @@ app.controller("QuestionFormCtrl", function($scope, $http) {
             'result_der' : 0,
             'total' : 0
         };
-        $http.post("/questions", data).
-            success(function (data, status, headers) {
-                alert("Dilema creado!");
-            });
+        $http.post("/questions", data);
+        window.history.back();
     };
 });
