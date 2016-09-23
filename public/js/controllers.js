@@ -47,3 +47,22 @@ app.controller("QuestionsCtrl", function($scope, $http, $window) {
             };
     });
 });
+
+app.controller("QuestionFormCtrl", function($scope, $http) {
+    $scope.opcion_izq = null;
+    $scope.opcion_der = null;
+
+    $scope.createQuestion = function() {
+        var data = {
+            'opcion_izq' : $scope.opcion_izq,
+            'opcion_der' : $scope.opcion_der,
+            'result_izq' : 0,
+            'result_der' : 0,
+            'total' : 0
+        };
+        $http.post("/questions", data).
+            success(function (data, status, headers) {
+                alert("Dilema creado!");
+            });
+    };
+});
